@@ -1,8 +1,10 @@
 body {
     text-align: center;
+    background-color: rgba(194, 173, 237, 0.65);
 }
 
 img {
     width: 400px;
     height: 400px;
+
 }
