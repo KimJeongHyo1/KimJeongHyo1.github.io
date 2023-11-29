@@ -1,0 +1,21 @@
+table{
+    width: 600px;
+    height: 700px;
+    font-size: 22px;
+    border: 1px solid #000;
+    /* margin: 0px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* td{
+    border: 1px solid #000;
+} */
+input{
+    width: 280px;
+    height: 30px;
+}
+input#check{
+    width: 50px;
+    height: 20px;
+}
