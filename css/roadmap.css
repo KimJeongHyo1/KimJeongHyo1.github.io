@@ -1,3 +1,18 @@
 body{
     background-color: rgb(235, 247, 220);
 }
+button{
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(90, 53, 240, 0.5);
+    width: 100px;
+    height: 35px;
+    font-size: 13.5px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}

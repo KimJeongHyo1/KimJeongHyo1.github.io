@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 253, 209, 0.7);
+    background-color: rgb(76, 43, 207, 0.4);
 }
 p{
     padding-left: 5%
@@ -8,15 +8,26 @@ p{
     font-family: 'Cafe24Ohsquareair';
     font-weight: normal;
     font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Ohsquareair/Cafe24Ohsquareair.eot');
     src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Ohsquareair/Cafe24Ohsquareair.eot?#iefix') format('embedded-opentype'),
          url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Ohsquareair/Cafe24Ohsquareair.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Ohsquareair/Cafe24Ohsquareair.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Ohsquareair/Cafe24Ohsquareair.ttf') format("truetype");
-    font-display: swap;
 }
 #font{
     font-family: 'Cafe24Ohsquareair';
-    font-size: 33px;
+    font-size: 31px;
     
+}
+button{
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(90, 53, 240, 0.5);
+    width: 100px;
+    height: 35px;
+    font-size: 13.5px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
 }

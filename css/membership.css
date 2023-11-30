@@ -1,21 +1,54 @@
+body{
+    background-color: rgb(230, 238, 252);
+}
 table{
     width: 600px;
     height: 700px;
-    font-size: 22px;
+    font-size: 20px;
     border: 1px solid #000;
-    /* margin: 0px; */
+    border-radius: 15px;
+    background-color: rgb(156, 184, 230);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/* td{
-    border: 1px solid #000;
-} */
 input{
     width: 280px;
     height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(230, 238, 252);
+
 }
 input#check{
-    width: 50px;
+    width: 100px;
     height: 20px;
+}
+td{
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+td > button{
+    width: 100px; 
+    height: 35px;
+    margin-left: 160px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(81, 139, 240);
+}
+button{
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(167, 183, 209);
+    width: 100px;
+    height: 35px;
+    font-size: 13.5px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
 }

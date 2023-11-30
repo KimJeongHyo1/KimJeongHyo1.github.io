@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/membership.css">
 </head>
 <body>
+    <nav>
+    <button type="button" onclick="location.href='../index.html'">home</button>
+    <button type="button" onclick="location.href='members.html'">회원목록열람</button>
+    </nav>
     <table>
         <tr>
             <td>아이디</td>
@@ -26,7 +30,7 @@
         </tr>
         <tr>
             <td>생년월일</td>
-            <td><input type="text" placeholder="생년월일을 -를 포함하여 입력하세요."></td>
+            <td><input type="date"></td>
         </tr>
         <tr>
             <td>핸드폰번호</td>
@@ -37,10 +41,10 @@
             <td><input id="check" type="checkbox"><label>남</label>
                 <input id="check" type="checkbox"><label>여</label></td>
         </tr>
+        <tr>
+            <td colspan="2"><button onclick="sign_in();">가입하기</button></td>
+        </tr>
     </table>
     
-<br><br><br><br><br><br><br><br>
-
-    <button>home</button>
 </body>
 </html>
