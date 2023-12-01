@@ -20,9 +20,12 @@ input{
     background-color: rgb(230, 238, 252);
 
 }
-input#check{
-    width: 100px;
+input#gender-male, #gender-female{
+    width: 80px;
     height: 20px;
+}
+input#ssn1, #ssn2{
+    width: 126px;
 }
 td{
     padding-bottom: 30px;

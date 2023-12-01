@@ -13,13 +13,12 @@ p{
 }
 #font{
     font-family: 'Cafe24Ohsquareair';
-    font-size: 31px;
+    font-size: 23px;
     
 }
 button{
-    margin-top: 8px;
-    margin-left: 10px;
-    margin-bottom: 30px;
+    margin-left: 10%;
+    margin-bottom: 13%;
     border: none;
     border-radius: 6px;
     background-color: rgb(90, 53, 240, 0.5);

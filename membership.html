@@ -14,33 +14,36 @@
     <table>
         <tr>
             <td>아이디</td>
-            <td><input type="text" placeholder="아이디를 입력하세요."></td>
+            <td><input type="text" id="Id" placeholder="아이디를 입력하세요."></td>
         </tr>
         <tr>
             <td>비밀번호</td>
-            <td><input type="text" placeholder="비밀번호를 입력하세요."></td>
+            <td><input type="text" id="pw" placeholder="비밀번호를 입력하세요."></td>
         </tr>
         <tr>
             <td>비밀번호 확인</td>
-            <td><input type="text" placeholder="비밀번호 확인을 위해 한번 더 입력하세요."></td>
+            <td><input type="text" id="checkpw" placeholder="비밀번호 확인을 위해 한번 더 입력하세요."></td>
         </tr>
         <tr>
             <td>이름</td>
-            <td><input type="text" placeholder="이름을 입력하세요."></td>
+            <td><input type="text" id="username" placeholder="이름을 입력하세요."></td>
         </tr>
         <tr>
-            <td>생년월일</td>
-            <td><input type="date"></td>
+            <td>주민번호</td>
+            <td>
+                <input type="text" name="ssn1" id="ssn1" class="short"> - 
+                <input type="password" name="ssn2" id="ssn2" class="short"></td>
         </tr>
         <tr>
             <td>핸드폰번호</td>
-            <td><input type="text" placeholder="핸드폰번호를 입력하세요."></td>
+            <td><input type="text" id="phone" placeholder="핸드폰번호를 입력하세요."></td>
         </tr>
         <tr>
             <td>성별</td>
-            <td><input id="check" type="checkbox"><label>남</label>
-                <input id="check" type="checkbox"><label>여</label></td>
+            <td><input type="radio" name="gender" id="gender-male" value="M"></input><label>남</label>
+                <input type="radio" name="gender" id="gender-female" value="F"></input><label>여</label></td>
         </tr>
+
         <tr>
             <td colspan="2"><button onclick="sign_in();">가입하기</button></td>
         </tr>
