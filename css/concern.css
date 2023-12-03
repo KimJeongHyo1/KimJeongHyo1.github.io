@@ -11,8 +11,14 @@ button{
     width: 100px;
     height: 35px;
     font-size: 13.5px;
+    cursor: pointer;
 }
 nav{
     display: flex;
     justify-content: space-between;
+}
+
+img{
+    width: 350px;
+    border-radius: 25px;
 }

@@ -11,8 +11,15 @@ button{
     width: 100px;
     height: 35px;
     font-size: 13.5px;
+    cursor: pointer;
 }
 nav{
     display: flex;
     justify-content: space-between;
+}
+div{
+    margin-left: 50px;
+}
+li{
+    margin-left: 70px;
 }

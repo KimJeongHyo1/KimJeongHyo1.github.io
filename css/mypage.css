@@ -14,10 +14,15 @@ p{
 #font{
     font-family: 'Cafe24Ohsquareair';
     font-size: 23px;
-    
+}
+#font1{
+    font-family: 'Cafe24Ohsquareair';
+    font-size: 19px;
+}
+#p{
+    margin-top: 110px;
 }
 button{
-    margin-left: 10%;
     margin-bottom: 13%;
     border: none;
     border-radius: 6px;
@@ -25,8 +30,18 @@ button{
     width: 100px;
     height: 35px;
     font-size: 13.5px;
+    cursor: pointer;
 }
 nav{
     display: flex;
     justify-content: space-between;
+}
+img{
+    width: 400px;
+    height: auto;
+    float: left;
+    margin-left: 100px;
+    margin-right: 70px;
+    /* vertical-align: middle; */
+    /* margin-left: 600px; */
 }

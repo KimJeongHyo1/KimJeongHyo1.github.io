@@ -1,0 +1,382 @@
+diff --git a/concern.html b/concern.html
+index b8cf768..e3cf4f7 100644
+--- a/concern.html
++++ b/concern.html
+@@ -4,6 +4,7 @@
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>concern</title>
++    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+     <link rel="stylesheet" href="css/concern.css">
+ </head>
+ <body>
+@@ -11,9 +12,33 @@
+     <button type="button" onclick="location.href='../index.html'">home</button>
+     <button type="button" onclick="location.href='roadmap.html'">개발자 로드맵</button>
+     </nav>
+-    
+ 
++    <div>뮤지컬</div><br>
++    <div class="bxslider">
++        <div><img src="images/1.jpg" alt="뮤1">
++        <img src="images/2.jpg" alt="뮤2">
++        <img src="images/2.1.jpg" alt="뮤3">
++        <img src="images/3.jpg" alt="뮤4">
++    </div>
++    <br><br>
++    <div>향수</div><br>
++    <div class="bxslider">
++        <img src="images/13.jpg" alt="향3">
++        <img src="images/11.jpg" alt="향1">
++        <img src="images/12.jpg" alt="향2">
++        <img src="images/14.jpg" alt="향4">
++    </div>
++    <br><br><br><br>
++    <div>전시회</div><br>
++    <div class="bxslider">
++        <img src="images/ㅈ1.jpg" alt="전1">
++        <img src="images/ㅈ2.jpg" alt="전2">
++        <img src="images/ㅈ3.jpg" alt="전3">
++        <img src="images/ㅈ4.jpg" alt="전4">
++    </div>
+ 
+ 
++    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.js"></script>
++    <script src="javascript/concern.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/css/concern.css b/css/concern.css
+index 8f10fc0..2bdbe1c 100644
+--- a/css/concern.css
++++ b/css/concern.css
+@@ -11,8 +11,14 @@ button{
+     width: 100px;
+     height: 35px;
+     font-size: 13.5px;
++    cursor: pointer;
+ }
+ nav{
+     display: flex;
+     justify-content: space-between;
++}
++
++img{
++    width: 350px;
++    border-radius: 25px;
+ }
+\ No newline at end of file
+diff --git a/css/index.css b/css/index.css
+index d75ad42..9a4cca0 100644
+--- a/css/index.css
++++ b/css/index.css
+@@ -2,11 +2,6 @@ body {
+     text-align: center;
+     background-color: rgba(194, 173, 237, 0.65);
+ }
+-
+-body:hover{
+-    
+-}
+-
+ img {
+     width: 500px;
+     height: 500px;
+@@ -36,4 +31,4 @@ ul > button {
+     background-color: transparent;
+     font-size: 16px;
+     color: midnightblue;
+-}
+\ No newline at end of file
++}
+diff --git a/css/members.css b/css/members.css
+index f6feb5b..93a5e94 100644
+--- a/css/members.css
++++ b/css/members.css
+@@ -3,4 +3,26 @@ body{
+ }
+ table{
+     border: 1px solid black;
++}
++th {
++    width: 200px;
++    text-align: center;
++    padding: 10px 0;
++    height: 40px;
++    font-size: 20px;
++}
++td {
++    font-size: 20px;
++}
++button{
++    margin-top: 8px;
++    margin-left: 10px;
++    margin-bottom: 30px;
++    border: none;
++    border-radius: 6px;
++    background-color: rgba(247, 155, 57, 0.7);
++    width: 100px;
++    height: 35px;
++    font-size: 13.5px;
++    cursor: pointer;
+ }
+\ No newline at end of file
+diff --git a/css/membership.css b/css/membership.css
+index a2a12fe..6657816 100644
+--- a/css/membership.css
++++ b/css/membership.css
+@@ -11,6 +11,8 @@ table{
+     display: flex;
+     justify-content: center;
+     align-items: center;
++    margin-left: auto;
++    margin-right: auto;
+ }
+ input{
+     width: 280px;
+@@ -20,12 +22,8 @@ input{
+     background-color: rgb(230, 238, 252);
+ 
+ }
+-input#gender-male, #gender-female{
+-    width: 80px;
+-    height: 20px;
+-}
+-input#ssn1, #ssn2{
+-    width: 126px;
++input#tel1, #tel2, #tel3{
++    width: 75px;
+ }
+ td{
+     padding-bottom: 30px;
+@@ -35,7 +33,7 @@ td > button{
+     width: 100px; 
+     height: 35px;
+     margin-left: 160px;
+-    margin-top: 60px;
++    margin-top: 80px;
+     border: none;
+     border-radius: 5px;
+     background-color: rgb(81, 139, 240);
+@@ -50,6 +48,7 @@ button{
+     width: 100px;
+     height: 35px;
+     font-size: 13.5px;
++    cursor: pointer;
+ }
+ nav{
+     display: flex;
+diff --git a/css/mypage.css b/css/mypage.css
+index 4e67fcc..e0fc5e5 100644
+--- a/css/mypage.css
++++ b/css/mypage.css
+@@ -14,10 +14,15 @@ p{
+ #font{
+     font-family: 'Cafe24Ohsquareair';
+     font-size: 23px;
+-    
++}
++#font1{
++    font-family: 'Cafe24Ohsquareair';
++    font-size: 19px;
++}
++#p{
++    margin-top: 110px;
+ }
+ button{
+-    margin-left: 10%;
+     margin-bottom: 13%;
+     border: none;
+     border-radius: 6px;
+@@ -25,8 +30,18 @@ button{
+     width: 100px;
+     height: 35px;
+     font-size: 13.5px;
++    cursor: pointer;
+ }
+ nav{
+     display: flex;
+     justify-content: space-between;
+-}
+\ No newline at end of file
++}
++img{
++    width: 400px;
++    height: auto;
++    float: left;
++    margin-left: 100px;
++    margin-right: 70px;
++    /* vertical-align: middle; */
++    /* margin-left: 600px; */
++}
+diff --git a/css/roadmap.css b/css/roadmap.css
+index 094800d..4996a67 100644
+--- a/css/roadmap.css
++++ b/css/roadmap.css
+@@ -11,8 +11,15 @@ button{
+     width: 100px;
+     height: 35px;
+     font-size: 13.5px;
++    cursor: pointer;
+ }
+ nav{
+     display: flex;
+     justify-content: space-between;
++}
++div{
++    margin-left: 50px;
++}
++li{
++    margin-left: 70px;
+ }
+\ No newline at end of file
+diff --git a/members.html b/members.html
+index 6b405dd..6df4afc 100644
+--- a/members.html
++++ b/members.html
+@@ -9,14 +9,15 @@
+ <body>
+     <button type="button" onclick="location.href='../index.html'">home</button>
+ 
+-    <table>
++    <table id="members">
+         <tr>
+-            <th>회원이름</th>
+             <th>회원아이디</th>
+             <th>회원전화번호</th>
+-            <th>성별</th>
++            <th>가입한날</th>
+         </tr>
++        <tbody></tbody>
+     </table>
+ 
++    <script src="javascript/members.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/membership.html b/membership.html
+index 672aade..04d7e49 100644
+--- a/membership.html
++++ b/membership.html
+@@ -11,43 +11,35 @@
+     <button type="button" onclick="location.href='../index.html'">home</button>
+     <button type="button" onclick="location.href='members.html'">회원목록열람</button>
+     </nav>
++    <form id="memberFrm">
+     <table>
+         <tr>
+             <td>아이디</td>
+-            <td><input type="text" id="Id" placeholder="아이디를 입력하세요."></td>
++            <td><input type="text" name="userId" id="userId" placeholder="아이디를 입력하세요."></td>
+         </tr>
+         <tr>
+             <td>비밀번호</td>
+-            <td><input type="text" id="pw" placeholder="비밀번호를 입력하세요."></td>
++            <td><input type="password" name="pwd" id="pw" placeholder="비밀번호를 입력하세요." minlength="8" maxlength="12"></td>
+         </tr>
+         <tr>
+             <td>비밀번호 확인</td>
+-            <td><input type="text" id="checkpw" placeholder="비밀번호 확인을 위해 한번 더 입력하세요."></td>
++            <td><input type="password" id="pwdCheck" placeholder="비밀번호 확인을 위해 한번 더 입력하세요."></td>
+         </tr>
+         <tr>
+-            <td>이름</td>
+-            <td><input type="text" id="username" placeholder="이름을 입력하세요."></td>
+-        </tr>
+-        <tr>
+-            <td>주민번호</td>
++            <td>전화번호</td>
+             <td>
+-                <input type="text" name="ssn1" id="ssn1" class="short"> - 
+-                <input type="password" name="ssn2" id="ssn2" class="short"></td>
+-        </tr>
+-        <tr>
+-            <td>핸드폰번호</td>
+-            <td><input type="text" id="phone" placeholder="핸드폰번호를 입력하세요."></td>
+-        </tr>
+-        <tr>
+-            <td>성별</td>
+-            <td><input type="radio" name="gender" id="gender-male" value="M"></input><label>남</label>
+-                <input type="radio" name="gender" id="gender-female" value="F"></input><label>여</label></td>
++                <input type="text" name="tel1" id="tel1" class="phone" > -
++                <input type="text" name="tel2" id="tel2" class="phone" > -
++                <input type="text" name="tel3" id="tel3" class="phone" >
++            </td>
+         </tr>
+ 
+         <tr>
+-            <td colspan="2"><button onclick="sign_in();">가입하기</button></td>
++            <td colspan="2"><button type="submit" id="sign_in">가입하기</button></td>
+         </tr>
+     </table>
+-    
++</form>
++
++    <script src="javascript/membership.js"></script>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/mypage.html b/mypage.html
+index a6a127d..cefe7e7 100644
+--- a/mypage.html
++++ b/mypage.html
+@@ -11,12 +11,17 @@
+     <button type="button" onclick="location.href='../index.html'">home</button>
+     <button type="button" onclick="location.href='concern.html'">관심사</button>
+     </nav>
+-    <fieldset>
+-        <p id="font" style="padding-top: 3%;">이름 : 김정효</p>
+-        <p id="font">취미👻 : 음악감상, 박효신과 관련된것</p>
+-        <p id="font">git hub : https://kimjeonghyo1.github.io/</p>
+-        <p id="font">📱번호 : 010 - 5437 - 9558</p>
+-        <img >
+-    </fieldset>
++    <div class="image">
++        <img src="images/free-icon-developer-4661318.png" alt="1">
++    </div>
++    <div id="p">
++        <p id="font">안녕하세요</p>
++        <p id="font">개발자를 목표로 하고있는 김정효입니다</p>
++        <p id="font1">나이 : 28</p>
++        <p id="font1">mail : wjdgy1129@naver.com</p>
++        <p id="font1">Git hub : https://github.com/KimJeongHyo1/KimJeongHyo1.github.io</p>
++</div>
++    <br><br><br><br><br><br><br><br>
++    <a href="https://www.flaticon.com/kr/">저작권</a>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/roadmap.html b/roadmap.html
+index f6911bd..4ba06bf 100644
+--- a/roadmap.html
++++ b/roadmap.html
+@@ -7,9 +7,28 @@
+     <link rel="stylesheet" href="css/roadmap.css">
+ </head>
+ <body>
++    <nav>
+     <button type="button" onclick="location.href='../index.html'">home</button>
+     <button type="button" onclick="location.href='membership.html'">회원가입</button>
++    </nav>
+ 
++    <div>Frontend</div>
++    <li>HTML</li>
++    <li>CSS</li>
++    <li>JavaScript</li>
++    <li>React</li>
++      <ul>HTML, CSS, JavaScript 개념 이해하기</ul>
++
++
++<br><br><br>
++
++    <div>Backend</div>
++    <li>Java</li>
++    <li>MySQL</li>
++    <li>Python</li>
++
++      <ul>언어에 대한 기본문법과 개념 숙지하기</ul>
++      <ul></ul>
+ 
+ </body>
+ </html>
+\ No newline at end of file
