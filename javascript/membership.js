@@ -1,3 +1,6 @@
+const key = document.querySelector("#userId");
+const value = document.querySelector("#pw");
+
 document.querySelector("#pw").addEventListener('blur', (e) => {
   const regexps = [/^.{8,12}$/, /[a-zA-Z]/i, /[0-9]/, /[!@#$%^&*()]/]; // 특수문자 포함조건 적을때 처음에 ^쓰지말기
   const value = e.target.value;
@@ -41,7 +44,7 @@ document.querySelector("#userId").addEventListener('blur', (e) => {
     const regExp2 = /[0-9]/;
     const userId = e.target;
     
-    if(!regExpTest(regExp1, userId, "아이디는 영소문자로 시작하는 4~12글자입니다."))
+    if(!regExpTest(regExp1, userId, "아이디는 영소문자로 시작하는 4 ~ 12글자입니다."))
         return false;
     
     if(!regExpTest(regExp2, userId, "아이디는 숫자를 하나이상 포함하세요."))
@@ -51,3 +54,27 @@ document.querySelector("#userId").addEventListener('blur', (e) => {
 document.getElementById('memberFrm').onsubmit = () => {
     alert('가입성공😉');
 };
+
+const frm = document.memberFrm;
+const userId = frm.userId;
+const tel = frm.tel;
+
+const savemember = () => {
+    const members = JWON.parse(localStorage.getItem('members')) || [];
+    members.push(new Member(userId.value, tel.value));
+    console.log(members);
+
+    localStorage.setItem('members', JSON.stringify(members));
+
+    frm.reset();
+
+    renderMembers();
+}
+
+class Member {
+    constructor(userId, tel, createdAt = Date.now()) {
+        this.userId = userId;
+        this.tel = tel;
+        this.createdAt = createdAt;
+    }
+}

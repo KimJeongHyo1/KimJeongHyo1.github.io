@@ -1,5 +1,6 @@
 const renderMembers = () => {
 const members = JSON.parse(localStorage.getItem("members"));
+console.log(members);
     document.querySelector("table#members tbody").innerHTML =
     members.reduce((html, {id, tel, createdAt}) => {
         return `
@@ -23,4 +24,4 @@ const convertToDateTime = (millis) => {
 };
 
 // 페이지 로딩시 출력
-// renderMembers();
+renderMembers();
